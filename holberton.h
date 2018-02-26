@@ -11,11 +11,11 @@
  */
 typedef struct fmt
 {
-	char *type;
+	char type;
 	int (*f)();
 } fmt;
 int _printf(const char *format, ...);
-int _putchar(char c);
+void _putchar(char *buffer, int size);
 int _strlen(char *string);
 char *ch(va_list c);
 char *str(va_list *s);
@@ -23,4 +23,8 @@ char *modulo(void);
 char *_int(va_list integ);
 char *_ui(va_list unsign);
 char *rot13(va_list str);
+char *_hex_l(va_list args);
+char *_hex_u(va_list args);
+char *_octal(va_list args);
+char *_rev(va_list args);
 #endif
