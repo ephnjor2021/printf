@@ -54,6 +54,7 @@ char *str(va_list *s)
 
 /**
  * modulo - returns modulo
+ * Return: void
  */
 
 char *modulo(void)
@@ -66,7 +67,7 @@ char *modulo(void)
 
 /**
  * _int - convert integer to a string
- * @integ:
+ * @integ: integer
  * Return: string representation of integer
  */
 
