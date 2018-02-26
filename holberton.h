@@ -16,4 +16,11 @@ typedef struct fmt
 } fmt;
 int _printf(const char *format, ...);
 int _putchar(char c);
+int _strlen(char *string);
+char *ch(va_list c);
+char *str(va_list *s);
+char *modulo(void);
+char *_int(va_list integ);
+char *_ui(va_list unsign);
+char *rot13(va_list str);
 #endif
