@@ -31,7 +31,7 @@ char *none(char c)
 	string[0] = '%';
 	string[1] = c;
 	string[2] = '\0';
-    return (p);
+	return (p);
 }
 
 
