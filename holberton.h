@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stddef.h>
-#define BUFFER_SIZE 1024
+#include <stdio.h>
+#define BUFFER_SIZE 1025
 
 /**
  * struct format - a structure containing a char to compare
@@ -12,11 +13,11 @@
  * @f: the address of the function
  */
 
-typedef struct format
+typedef struct fmt
 {
 	char *type;
-	int *(*f)();
-} fmt;
+	char *(*f)();
+} fmt_t;
 
 int _printf(const char *format, ...);
 void _putchar(char *buffer, int size);
