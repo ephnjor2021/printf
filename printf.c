@@ -26,6 +26,7 @@ char *none(char c)
 {
 	char string[3];
 	char *p;
+
 	p = string;
 	string[0] = '%';
 	string[1] = c;
