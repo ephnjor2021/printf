@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <stddef.h>
 #include <stdio.h>
-#define BUFFER_SIZE 1025
+#define BUFFER_SIZE 1024
 
 /**
  * struct format - a structure containing a char to compare

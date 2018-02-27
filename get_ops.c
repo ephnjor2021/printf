@@ -2,6 +2,13 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+/**
+ * get_ops - getting format options
+ * @omar: string being passed
+ * Return: particular function resp to the string
+ *
+ */
+
 char *(*get_ops(char omar))(va_list)
 {
 	int a;

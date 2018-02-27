@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * octal - get octal
+ * _octal - get octal
  * @args: arguments
  * Return: string
  */
