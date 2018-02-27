@@ -12,7 +12,7 @@ char *_int(va_list integ)
 	char *str;
 
 	a = va_arg(integ, int);
-	cnt = a = b = 0;
+	cnt = b = 0;
 	exp = 1;
 	a >= 0 ? (res = a * -1) : (res = a, cnt++);
 	tmp = res;
