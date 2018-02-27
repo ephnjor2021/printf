@@ -8,7 +8,7 @@
 #define BUFFER_SIZE 1024
 
 /**
- * struct format - a structure containing a char to compare
+ * struct fmt - a structure containing a char to compare
  * @type: the char we want to compare to
  * @f: the address of the function
  */
