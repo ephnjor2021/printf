@@ -29,7 +29,7 @@ char *(*get_ops(char omar))(va_list)
 	{
 
 		if (omar == *ops[a].type)
-			return (*ops[a].f);
+			return (ops[a].f);
 	}
 
 	return (NULL);
