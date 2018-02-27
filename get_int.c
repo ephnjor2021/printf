@@ -24,7 +24,7 @@ char *_int(va_list integ)
 	}
 	str = malloc((cnt + 1) * sizeof(char));
 	if (str == NULL)
-		return (NULL);
+		return (-1);
 	if (a < 0)
 		str[b++] = '-';
 	while (exp >= 1)
