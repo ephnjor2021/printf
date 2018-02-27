@@ -26,7 +26,6 @@ char *none(char c)
 {
 	char string[3];
 	char *p;
-
 	p = string;
 	string[0] = '%';
 	string[1] = c;
@@ -54,16 +53,19 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (a = 0; a < BUFFER_SIZE; a++)
 	{
-		buffer_2[a] = 0;
+		buffer_2[a] = 0; /*calloc*/
 	}
-	buffer = 0;
+	buffer = 0; /*buffer count*/
 	get_op_pt = NULL;
-	total = &buffer;
+	total = &buffer; /*total = buffer count */
 
 	va_start(argpt, format);
 	for (a =  len1 = len2 = 0; format && format[a]; a++)
 	{
-		if (format[a] == '%')
+		if (format[a] == '%' && (format[a + 1] == '\0' ||
+					 format[a + 1] == ' '))
+			return (-1);
+		else if (format[a] == '%')
 		{
 			get_op_pt = get_ops(format[a + 1]);
 			buff = (get_op_pt == NULL) ? none(format[a + 1]) :
