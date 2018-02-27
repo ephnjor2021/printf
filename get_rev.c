@@ -16,8 +16,5 @@ char *_rev(va_list args)
 	rev_s = malloc((len + 1) * sizeof(char));
 	for (i = 0, j = len - 1; i < len; i++, j--)
 		rev_s[i] = buffer[j];
-	while (rev_s[i] != '\0')
-		temp[i] = rev_s[i];
-	free(rev_s);
-	return (temp);
+	return (rev_s);
 }
