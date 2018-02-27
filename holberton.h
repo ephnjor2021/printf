@@ -3,17 +3,21 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stddef.h>
+#define BUFFER_SIZE 1024
 
 /**
- * struct fmt - a structure containing a char to compare
+ * struct format - a structure containing a char to compare
  * @type: the char we want to compare to
  * @f: the address of the function
  */
-typedef struct fmt
+
+typedef struct format
 {
-	char type;
-	int (*f)();
+	char *type;
+	int *(*f)();
 } fmt;
+
 int _printf(const char *format, ...);
 void _putchar(char *buffer, int size);
 int _strlen(char *string);
@@ -23,8 +27,10 @@ char *modulo(void);
 char *_int(va_list integ);
 char *_ui(va_list unsign);
 char *rot13(va_list str);
-char *_hex_l(va_list args);
-char *_hex_u(va_list args);
 char *_octal(va_list args);
 char *_rev(va_list args);
+char *_memcpy(char *dest, char *src, unsigned int n, unsigned int buffer);
+int memalloc(char *buff, int len2, char *buffer_2, int len1, double *total);
+char *cs(char c);
+char *(*get_ops(char omar))(va_list);
 #endif
