@@ -63,8 +63,7 @@ int _printf(const char *format, ...)
 	va_start(argpt, format);
 	for (a =  len1 = len2 = 0; format && format[a]; a++)
 	{
-		if (format[a] == '%' && (format[a + 1] == '\0' ||
-					 format[a + 1] == ' '))
+		if (format[a] == '%' && format[a + 1] == '\0')
 			return (-1);
 		else if (format[a] == '%')
 		{
@@ -74,6 +73,7 @@ int _printf(const char *format, ...)
 
 			len2 = _strlen(buff);
 			len1 = memalloc(buff, len2, buffer_2, len1, total);
+
 			a++;
 		}
 		else
