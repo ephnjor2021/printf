@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * cs -
- *
+ * cs - convert char to str
+ * @c: char being passed
+ * Return: ptr to str
  */
 
 char *cs(char c)
@@ -16,7 +17,9 @@ char *cs(char c)
 }
 
 /**
- * none -
+ * none - no match found for format but % found
+ * @c: char storer
+ * Return: str with % and char
  */
 
 char *none(char c)
@@ -27,7 +30,7 @@ char *none(char c)
 	p = string;
 	string[0] = '%';
 	string[1] = c;
-	    string[2] = '\0';
+	string[2] = '\0';
     return (p);
 }
 
