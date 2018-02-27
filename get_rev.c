@@ -8,7 +8,7 @@
 
 char *_rev(va_list args)
 {
-	char *rev_s, *buffer, *temp;
+	char *rev_s, *buffer;
 	int i, j, len;
 
 	buffer = va_arg(args, char *);
