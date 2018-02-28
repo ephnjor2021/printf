@@ -1,17 +1,17 @@
 #include "holberton.h"
 
-/**
- * str - get string from arguments
- * @s: arguments
- * Return: string
- */
-
-char *str(va_list *s)
+int str(va_list string)
 {
-	char *string;
+	int len;
+	char *str;
 
-	string = va_arg(s, char *);
-	if (string == NULL)
-		return ("(null)");
-	return (string);
+	str = va_arg(string, char *);
+
+	if (str == NULL)
+		str = "(null)";
+	len = 0;
+
+	while (str[len] != '\0')
+		len = len + _putchar(str[len]);
+	return (len);
 }
