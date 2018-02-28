@@ -56,6 +56,7 @@ int _printf(const char *format, ...)
 		{"c", ch},
 		{"s", str},
 		{"d", _int},
+		{"b", _bin},
 		{"i", _int},
 		{"u", _ui},
 		{"o", _oct},
