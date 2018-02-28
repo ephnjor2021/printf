@@ -19,7 +19,7 @@ int _hex_str(unsigned int n, unsigned int hex, char alpha)
 		c = a + '0';
 	if (b == 0)
 	{
-		return(_putchar(c));
+		return (_putchar(c));
 	}
 	if (b < hex)
 	{
@@ -47,5 +47,5 @@ int _hex_l(va_list hexa)
  */
 int _hex_u(va_list hexa)
 {
-	return(_hex_str(va_arg(hexa, unsigned int), 16, 'A'));
+	return (_hex_str(va_arg(hexa, unsigned int), 16, 'A'));
 }
