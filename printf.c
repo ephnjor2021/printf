@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "holberton.h"
 
 /**
  * print_op - function to check which specifier to print
@@ -30,12 +31,12 @@ int print_op(const char *format, fmt_t *print_arr, va_list list)
 				if (a == '\0')
 					return (-1);
 				if (a != '%')
-					count = count + _putchar('%');
-				count = count + _putchar(a);
+					count += _putchar('%');
+				count += _putchar(a);
 			}
 		}
 		else
-			count = count + _putchar(a);
+			count += _putchar(a);
 		b++;
 		a = format[b];
 	}
@@ -61,7 +62,7 @@ int _printf(const char *format, ...)
 		{"u", _ui},
 		{"o", _oct},
 		{"R", _rot13},
-		{"\0", NULL}
+		{NULL, NULL}
 	};
 
 	if (format == NULL)
@@ -69,6 +70,5 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	a = print_op(format, ops, list);
 	va_end(list);
-
 	return (a);
 }
