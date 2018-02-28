@@ -1,18 +1,10 @@
 #include "holberton.h"
 
-/**
- * ch - get char from arguments
- * @c: arguments
- * Return: char
- */
-
-char *ch(va_list c)
+int ch(va_list character)
 {
-	char string[2];
-	char *p;
+	char c;
 
-	p = string;
-	string[0] = va_arg(c, int);
-	string[1] = '\0';
-	return (p);
+	c = va_arg(character, int);
+	_putchar(c);
+	return (1);
 }
