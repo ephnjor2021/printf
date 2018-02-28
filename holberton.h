@@ -22,6 +22,7 @@ int ch(va_list character);
 int str(va_list string);
 int _int(va_list integ);
 int _ui(va_list unsign);
+int _oct(va_list octo);
 int _strlen(char *s);
 int _putchar(char c);
 #endif

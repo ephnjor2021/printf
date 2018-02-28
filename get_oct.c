@@ -1,28 +1,28 @@
 #include "holberton.h"
 
 /**
- * _bin - function to print binary
- * @bin: list being passed
- * Return: updated count return
+ * _oct - function to print octal
+ * @octo: list being passed
+ * Return: updated count
  */
-int _bin(va_list bin)
+int _oct(va_list octo)
 {
 	int count = 0, i;
 	int *arr;
-	unsigned int n = va_arg(bin, unsigned int);
+	unsigned int n = va_arg(octo, unsigned int);
 	unsigned int tmp = n;
 
-	while (n / 2 != 0)
+	while (n / 8 != 0)
 	{
-		n /= 2;
+		n / = 8;
 		count++;
 	}
 	count++;
 	arr = malloc(count * sizeof(int));
 	for (i = 0; i < count; i++)
 	{
-		arr[i] = tmp % 2;
-		tmp /= 2;
+		arr[i] = tmp % 8;
+		tmp /= 8;
 	}
 	for (i = count - 1; i >= 0; i--)
 	{
