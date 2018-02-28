@@ -7,27 +7,41 @@
  */
 int _bin(va_list bin)
 {
-	int count = 0, i;
-	int *arr;
-	unsigned int n = va_arg(bin, unsigned int);
-	unsigned int tmp = n;
+	unsigned int num;
+	int quotient, remainder, dividend, base, i, size, count;
+	char arr[32];
 
-	while (n / 2 != 0)
+	size = 32;
+	count = 0;
+	base = 2;
+	num = va_arg(bin, unsigned int);
+	if (num == 0)
 	{
-		n /= 2;
+		_putchar('0');
+		return (1);
+	}
+	dividend = num;
+	quotient = num;
+	i = size - 1;
+
+	for (i = 0; i < size; i++)
+	{
+		arr[i] = '0';
+	}
+
+	while (quotient > 0)
+	{
+		remainder = dividend % base;
+		quotient = dividend / base;
+		dividend = quotient;
+		arr[i] = remainder + '0';
+		i--;
 		count++;
 	}
-	count++;
-	arr = malloc(count * sizeof(int));
-	for (i = 0; i < count; i++)
+
+	for (i = size - count; i < size + 1; i++)
 	{
-		arr[i] = tmp % 2;
-		tmp /= 2;
+		_putchar(arr[i]);
 	}
-	for (i = count - 1; i >= 0; i--)
-	{
-		_putchar(arr[i] + '0');
-	}
-	free(arr);
 	return (count);
 }
