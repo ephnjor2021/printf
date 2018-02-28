@@ -58,9 +58,9 @@ int _printf(const char *format, ...)
 		{"d", _int},
 		{"i", _int},
 		{"u", _ui},
-		{"o", oct},
-		{"r", rev},
-		{"R", rot13},
+		{"o", _oct},
+		{"r", str_rev},
+		{"R", _rot13},
 		{"\0", NULL}
 	};
 

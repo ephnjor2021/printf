@@ -14,7 +14,7 @@ int _oct(va_list octo)
 
 	while (n / 8 != 0)
 	{
-		n / = 8;
+		n /= 8;
 		count++;
 	}
 	count++;
