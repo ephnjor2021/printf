@@ -22,8 +22,6 @@ output : The dog jumped 7 times! -C
 - va_copy (man 3 va_copy)
 - va_arg (man 3 va_arg)
 
-# Custom printf function
-
 ## Files and functions
 * **_putchar.c**:
   * int _putchar(char c) - function to print char
