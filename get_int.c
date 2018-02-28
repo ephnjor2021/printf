@@ -1,36 +1,27 @@
 #include "holberton.h"
 
-/**
- * _int - convert integer to a string
- * @integ: integer
- * Return: string representation of integer
- */
-
-char *_int(va_list integ)
+int _int(va_list integ)
 {
-	int a, b, res, tmp, exp, cnt;
-	char *str;
+	int a, expo = 1, len = 0;
+	unsigned int n;
 
 	a = va_arg(integ, int);
-	cnt = b = 0;
-	exp = 1;
-	a >= 0 ? (res = a * -1) : (res = a, cnt++);
-	tmp = res;
-	while (tmp <= -10)
-	{
-		exp *= 10;
-		tmp /= 10;
-		cnt++;
-	}
-	str = malloc((cnt + 1) * sizeof(char));
-	if (str == NULL)
-		return (NULL);
+
 	if (a < 0)
-		str[b++] = '-';
-	while (exp >= 1)
 	{
-		str[b++] = (((res / exp) % 10) * -1 + '0');
-		exp /= 10;
+		len = len + _putchar('-');
+		n = a * -1;
 	}
-	return (str);
+	else
+		n = a;
+	while (n / expo > 9)
+		expo *=10;
+
+	while (expo != 0)
+	{
+		len = len + _putchar(n / expo + '0');
+		n = n % expo;
+		expo = expo / 10;
+	}
+	return (len);
 }
