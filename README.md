@@ -1,34 +1,40 @@
 # Custom printf function
 
 ## Files and functions
+* **_putchar.cc**:
+  * int _bin(va_list bin) - function to print binary
+
+* **_strlen.c**:
+  * int _bin(va_list bin) - function to print binary
+
+* **get_bin.c**:
+  * int _bin(va_list bin) - function to print binary
+
+* **get_char.c**:
+  * int ch(va_list character) - function to return char
+
+* **get_hex.c**:
+  * int _hex_str(unsigned int n, unsigned int hex, char alpha) - converts the number from base 10 to hex
+
+* **get_int.c**:
+  * int _int(va_list integ) - function to print integers
+
+* **get_oct.c**:
+  * int _oct(va_list octo) - function to print octal
+
+* **get_rot13.c**:
+  * int _rot13(va_list rot) - prints rot13 version
+
+* **get_str.c**:
+  * int str(va_list *s) - prints string to stdout
+
+* **get_unsigned.c**:
+  * int _ui(va_list unsign) - unsigned int print to stdout
+
 * **holberton.h**: header file
-  * typedef struct fmt (fmt_t)
-  * BUFFER_SIZE
+
+* **man_3_printf**: _printf man page
+
 * **printf.c**: main custom _printf function
-  * char *cs(char c) - convert char to str
-  * char *none(char c) - no match found for format but % found
-  * int _printf(const char *format, ...) - custom printf function
-* **_strlen.c**
-  * int _strlen(char *string) - gets string length
-* **get_ops.c**
-  * char *(*get_ops(char omar))(va_list) - getting format options
-* **memalloc.c**
-  * void _putchar(char *buffer, int size) - writes the string to stdout
-  * char *_memcpy(char *dest, char *src, unsigned int n, unsigned int buffer) - copies specified memory
-  * int memalloc(char *buff, int len2, char *buffer_2, int len1, double *total) - allocates to buffer
-* **get_char.c**
-  * char *ch(va_list c) - get char from arguments
-* **get_str.c**
-  * char *str(va_list *s) - get string from arguments
-* **get_int.c**
-  * char *_int(va_list integ) - convert integer to a string
-* **get_mod.c**
-  * char *modulo(void) - returns modulo
-* **get_unsign.c**
-  * char *_ui(va_list unsign) - convert ui to string
-* **get_rot.c**
-  * char *rot13(va_list str) - convert rot13
-* **get_oct.c**
-  * char *_octal(va_list args) - get octal
-* **get_rev.c**
-  * char *_rev(va_list args) - get rev
+  * int print_op(const char *format, fmt_t *print_arr, va_list list) - function to check which specifier to print
+  * int _printf(const char *format, ...) - prints output according to format
