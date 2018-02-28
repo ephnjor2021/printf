@@ -59,7 +59,6 @@ int _printf(const char *format, ...)
 		{"i", _int},
 		{"u", _ui},
 		{"o", _oct},
-		{"r", str_rev},
 		{"R", _rot13},
 		{"\0", NULL}
 	};

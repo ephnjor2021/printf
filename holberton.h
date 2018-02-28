@@ -24,8 +24,6 @@ int _int(va_list integ);
 int _ui(va_list unsign);
 int _oct(va_list octo);
 int _rot13(va_list rot);
-int str_rev(va_list list);
-int print_rev(char *s);
 int _strlen(char *s);
 int _putchar(char c);
 #endif
