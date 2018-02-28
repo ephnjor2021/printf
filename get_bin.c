@@ -19,6 +19,11 @@ int _bin(va_list bin)
 	}
 	count++;
 	arr = malloc(count * sizeof(int));
+	if (arr == NULL)
+	{
+		free(arr);
+		return (0);
+	}
 	for (i = 0; i < count; i++)
 	{
 		arr[i] = tmp % 2;
