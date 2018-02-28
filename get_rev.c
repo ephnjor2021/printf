@@ -1,20 +1,14 @@
 #include "holberton.h"
 
 /**
- * _rev - get rev
- * @args: arguments
- * Return: string
+ * print_rev - print string in reverse
+ * @s: string to reverse
+ *
+ * Return: character count
  */
-
-char *_rev(va_list args)
+int print_rev(char *s)
 {
-	char *rev_s, *buffer;
-	int i, j, len;
-
-	buffer = va_arg(args, char *);
-	len = _strlen(buffer);
-	rev_s = malloc((len + 1) * sizeof(char));
-	for (i = 0, j = len - 1; i < len; i++, j--)
-		rev_s[i] = buffer[j];
-	return (rev_s);
+	if (*s == '\0')
+		return (0);
+	return (print_rev(s + 1) + _putchar(*s));
 }
