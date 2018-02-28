@@ -1,7 +1,7 @@
 # Custom printf function
 
 ## Files and functions
-* **_putchar.cc**:
+* **_putchar.c**:
   * int _bin(va_list bin) - function to print binary
 
 * **_strlen.c**:
