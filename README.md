@@ -2,10 +2,10 @@
 
 ## Files and functions
 * **_putchar.c**:
-  * int _bin(va_list bin) - function to print binary
+  * int _putchar(char c) - function to print char
 
 * **_strlen.c**:
-  * int _bin(va_list bin) - function to print binary
+  * int _strlen(char *string) - gets string length
 
 * **get_bin.c**:
   * int _bin(va_list bin) - function to print binary
