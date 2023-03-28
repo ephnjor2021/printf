@@ -3,7 +3,7 @@ The _printf function is a custom implementation of the C programming function pr
 
 ## Example
 ```c
-#include "holberton.h"
+#include "main.h"
 _printf("The %s jumped %d times! -%c", "dog", 7, 'C');
 ```
 output : The dog jumped 7 times! -C
